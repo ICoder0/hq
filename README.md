@@ -6,6 +6,7 @@ it's better piping action before jq stdin.
 ```shell
 pip install lxml
 pyinstaller -F hq.py
+# wget https://github.com/ICoder0/hq/releases/download/v0.1.0/hq-linux
 sudo mv ./hq /usr/bin
 sudo chmod +x /usr/bin/hq
 ```
