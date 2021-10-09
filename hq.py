@@ -31,7 +31,7 @@ def hq():
 
     resp = {}
     for index, exp in enumerate(args.xpath):
-        it = re.findall('(\\w+)=?(/.*)', exp, re.M)[0]
+        it = re.findall('(\\w+)?=?(/.*)', exp, re.M)[0]
         key = '_{}'.format(index) if len(it[0]) == 0 else it[0]
         val = it[0] if len(it) == 1 else it[1]
         items = [
@@ -40,7 +40,7 @@ def hq():
         ]
         resp[key] = items[0] if len(items) == 1 else items
 
-    sys.stdout.writelines(json.dumps(resp, ensure_ascii=False))
+    sys.stdout.writelines(json.dumps(resp, ensure_ascii=False) + '\n')
     sys.stdout.flush()
 
 
