@@ -23,14 +23,14 @@ jq '[.title,.link] | transpose | map({title:.[0],link:.[1]})' > test.json
 
 ### without special key
 input
-`hq -x '/html/body/text()' '<html><body>123123</body></html>'`
+`hq -x '/html/body/text()' '<html><body>123</body></html>'`
 
 output 
 `{"_0": "123"}`
 
 ### with special key
 input
-`hq -x 'test=/html/body/text()' '<html><body>123123</body></html>'`
+`hq -x 'test=/html/body/text()' '<html><body>123</body></html>'`
 
 output
 `{"test":"123"}`
