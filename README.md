@@ -5,10 +5,6 @@ it's better piping action before jq stdin.
 ## installation
 
 ```shell
-pip install hq
-```
-
-```shell
 python3 setup install
 ```
 
