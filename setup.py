@@ -30,6 +30,7 @@ setup(
     long_description=long_description(),
     packages=find_packages(),
     install_requires=requirements(),
+    dependency_links=['https://pypi.tuna.tsinghua.edu.cn/simple']
     python_requires=">=3.6",
     entry_points={
         'console_scripts': [
