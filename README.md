@@ -2,13 +2,13 @@
 HTML parser using Xpath expression then dump as json,
 it's better piping action before jq stdin.
 
-## installation
+## Installation
 
 ```shell
 python3 setup install
 ```
 
-## best practice
+## Best practice
 - step1: fetch by [cURL](https://github.com/curl/curl)
 - step2: extract vars from `html/xml` via xpath and dumps as json
 - step3: permutate-combine json via [jq](https://github.com/stedolan/jq)
@@ -19,7 +19,7 @@ hq -x 'title=//xxxx' -x 'link=//xxxxx' |
 jq '[.title,.link] | transpose | map({title:.[0],link:.[1]})' > test.json
 ```
 
-## usage
+## Usage
 
 ### without special key
 input
